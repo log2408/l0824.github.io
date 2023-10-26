@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <title>Document</title>
+    <link rel="stylesheet" href="baitaplontrang2.css">
+    <link rel="stylesheet" href="baitaplontrang3.css">
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="footer.css">
+</head>
+<body>
+    <header>
+        <nav class="logo">
+            <div class="container">
+                <ul>
+                    <li><a href=""><img style="width: 150px" src="IT Mart.png" alt=""></a></li>
+                    <li><input type="text" placeholder="Bạn muốn tìm gì ..."><i class="fa-solid fa-magnifying-glass"></i></i></li>
+                    <li><a href=""><button><i class="fa-solid fa-cart-shopping"></i></i>Giỏ hàng</button></a></li>
+                    <li><a href=""><button>Đơn hàng đã giao</button></a></li>
+                    <li><a href=""><button><i class="fa-solid fa-user"></i>Đăng nhập</button></a></li>
+                    <li><a href="">24h săn sale</a></li>
+                    <li><a href="">Tin tức</a></li>
+                    <li><a href="">Hỏi đáp</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <section>
+        <div class="container-fluid p-5 pt-2">
+         <div class="myp"><p>Trang chủ/Sản Phẩm/Dưa Lưới</p></div>
+         <div class="row">
+             <div class="col-sm-6">
+                <div class="product1 row">
+                        <div class="product-bimg">
+                            <img src="dualuoi1.jpg" alt="">
+                        </div>
+                        <!-- <div class="product-simg">
+                            <img src="cach-choi-goose-goose-duck.jpg" alt="">
+                            <img src="cach-choi-goose-goose-duck.jpg" alt="">
+                            <img src="cach-choi-goose-goose-duck.jpg" alt="">
+                            <img src="cach-choi-goose-goose-duck.jpg" alt="">
+                        </div> -->
+                </div>
+             </div>
+             <div class="col-sm-6">
+                <div class="product-name">
+                    <h1>Dưa Lưới nhập khẩu</h1>
+                    <p>SKU:221231009</p>
+                </div>
+                 <div class="product">
+                     <div class="myprice">
+                         <p class="buy-thu1">Giá niêm yết</p>
+                         <span class="myprice-old" id="gia1"></span><sup>đ</sup>
+                     </div>
+                     <div class="myprice">
+                         <p class="buy-thu2">Giá khuyến mãi</p>
+                         <span class="myprice-new" id="gia"></span><sup class="myprice-new1">đ</sup>
+                     </div>
+                     <hr>
+                     <div class="myprice">
+                         <p class="buy-thu3">Tình Trạng</p>
+                         <p>Còn hàng</p>
+                     </div>
+                     <div class="myprice">
+                         <p class="buy-thu4">Vận chuyển</p>
+                         <span>Miễn phí giao hàng cho đơn từ 300.000đ
+                             <p>Giao hàng trong 2 giờ</p>
+                         </span>
+                     </div>
+                     <hr>
+                     <!-- <div class="buy-thu">
+                         <p class="buy-thu1">Số lượng</p>
+                         <button><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6">
+                             <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 12h-15" />
+                           </svg>
+                           </button>
+                         <input type="text" name="thu" id="thu">
+                         <button><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6">
+                             <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+                           </svg>
+                           </button>
+                     </div> -->
+                
+                     <label for="loai"><b>Loại:</b></label>
+                     <select id="loai">
+                         <option value="1">0.5kg</option>
+                         <option value="2">1kg</option>  
+                     </select>                 
+                     <script>
+                         // Giá cơ bản và giá của RAM và ROM
+                         var giaCoBan = 89999;
+                         var giaBT = 150000;
+                         var giaLoai = {
+                             1: 0,
+                             2: 90000,
+                         };
+                         var giaLoai1 = {
+                            1 : 0,
+                            2 : 150000,
+                         }
+                 
+                         // Lấy các phần tử HTML
+                         var selectLoai = document.getElementById("loai");
+                         var selectLoai1 = document.getElementById("loai");
+                         var spanGia = document.getElementById("gia");
+                         var spanGia1 = document.getElementById("gia1");
+                 
+                         // Lắng nghe sự kiện thay đổi trong hộp chọn RAM và ROM
+                         selectLoai.addEventListener("change", updatePrice);
+                         selectLoai1.addEventListener("change", updatePrice1);
+                 
+                         // Hàm cập nhật giá dựa trên lựa chọn của người dùng
+                         function updatePrice() {
+                             var selectedLoai = parseInt(selectLoai.value);
+                 
+                             // Tính giá dựa trên các lựa chọn
+                             var giaMoi = giaCoBan + giaLoai[selectedLoai];
+                 
+                             // Hiển thị giá mới trong hộp
+                             spanGia.textContent = giaMoi + " ";
+                         }
+                         function updatePrice1() {
+                             var selectedLoai1 = parseInt(selectLoai1.value);
+                 
+                             // Tính giá dựa trên các lựa chọn
+                             var giaMoi = giaBT + giaLoai1[selectedLoai1];
+                 
+                             // Hiển thị giá mới trong hộp
+                             spanGia1.textContent = giaMoi + " ";
+                         }
+                 
+                         // Gọi hàm cập nhật giá lúc ban đầu để hiển thị giá ban đầu
+                         updatePrice();
+                         updatePrice1();
+                     </script>
+                     <br>
+                     <div class="product-size">
+                        <p style="font-weight: bold;">Số Lượng:</p>
+                        <input type="number" min="0" value="1" class="product-size1">
+                     </div>
+                     <div class="product-button">
+                        <button type="button" class="product__buyproduct">Mua</button>
+                     </div>
+                 </div>
+             </div>
+         </div>
+        </div>
+     </section>
+        <div class="container-fluid">
+         <div class="row">
+             <div class="col-sm-5">
+                <h2>Mô Tả</h2>
+                <h3>Dưa Lưới</h3>
+                <p>Trong quả dưa lưới chứa nhiều loại vitamin A, C, E và axit folic, độ ngọt cao, đem lại nhiều tác dụng cho cơ thể.
+                    Tăng cường hệ miễn dịch và phòng chống ung thư.
+                    Chứa nhiều chất xơ, phòng chống táo bó hiệu quả.
+                    Cải thiện hô hấp, giảm mệt mỏi, chứa mất ngủ.
+                    Chứa hàm lượng axit folic cao, tốt cho thai nhi và phụ nữ mang thai.
+                    Phòng ngừa loãng xương, ổn định huyết áp...</p>
+             </div>
+             <div class="col-sm-7">
+                <h2>Thông Tin</h2>
+               <div class="information-h">
+                <div class="information">
+                    <p>Xuất Xứ</p>
+                    <p>Vietnam</p>
+                </div>
+                <hr>
+                <div class="information">
+                    <p>Bảo Quản</p>
+                    <p>Bảo quản trong tủ lạnh để giữ được độ tươi ngon của sản phẩm. Sử dụng khi còn tươi.</p>
+                </div>
+                <hr>
+                <div class="information">
+                    <p>Khối Lượng</p>
+                    <p>1 KG</p>
+                </div>
+                <hr>
+               </div>
+             </div>
+         </div>
+        </div>
+</body>
+<div class="end">
+    <li><img src="1.png" alt=""><p>Sản phẩm an toàn</p></li>
+    <li><img src="2.png" alt=""><p>Chất lượng đảm bảo</p></li>
+    <li><img src="3.png" alt=""><p>Dịch vụ vượt trội</p></li>
+    <li><img src="4.png" alt=""><p>Giao hàng siêu tốc</p></li>
+</div>
+<section class="content-footer">
+    <nav class="footer">
+        <div class="container-footer">
+            <ul>
+                <li><img src="Mart.png" alt="">
+                    <p id="ct">Công ty cổ phần dịch vụ thương mại <br>tổng hợp IT Mart</p>
+                    <p id="a">Mã số doanh nghiệp: 0124854292</p>
+                    <p id="a">Đăng ký lần đầu ngày 24 tháng 10 năm 2023</p>
+                </li>
+                <li class="me"><p>Về chúng tôi</p>
+                    <a href="" id="gt">Giới thiệu về IT Mart</a>
+                    <a href="" id="gt">Danh sách của hàng</a>
+                    <a href="" id="gt">Quản lý chất lượng</a>
+                    <a href="" id="gt">Chính sách bảo mật</a>
+                    <a href="" id="gt">Điều khoản và điều kiện giao dịch</a>
+                </li>
+                <li class="sp"><p>Hỗ trợ khách hàng</p>
+                    <a href="" id="gt">Trung tâm hỗ trợ khách hàng</a>
+                    <a href="" id="gt">Chính sách giao hàng</a>
+                    <a href="" id="gt">Chính sách thanh toán</a>
+                    <a href="" id="gt">Chính sách đổi trả</a>
+                    <a href="" id="gt">Đánh giá góp ý</a>
+                    <a href="" id="gt">Danh sách trúng thưởng</a>
+                </li>
+                <li class="care"><p>Chăm sóc khách hàng</p>
+                    <a href="" id="gt">Mua hàng Online: 098122445</a>
+                    <a href="" id="gt">Email: itmart@gmail.com</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</section>
+</footer>
+</html>

@@ -1,0 +1,109 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+.myimg-anh {
+    width: 400px;
+    height: 450px;
+}
+h1 {
+    font-size: 20px;
+}
+.product p {
+    display: block; /* Đặt các thẻ <p> thành khối (block-level elements) */
+}
+.buy-thu {
+    display: flex;
+}
+.buy-thu1 {
+    padding-right: 100px;
+}
+.buy-thu2 {
+    padding-right: 75px;
+    margin-bottom: 0px;
+}
+.buy-thu3 {
+    padding-right: 113px;
+}
+.buy-thu4 {
+    padding-right: 104px;
+}
+.buy-thu button{
+    width: 35px;
+    height: 35px;
+    outline: none;
+    background: none;
+    border: 1px solid #ececec;
+    cursor: pointer;
+}
+.buy-thu button:hover {
+    background-color: #ececec;
+}
+.buy-thu button svg {
+    color: #909090;
+}
+.buy-thu input {
+    height: 35px;
+}
+.buy-thu button:hover svg {
+    color: #4f4f4f;
+}
+.myprice {
+    display: flex;
+    align-items: baseline; /*can cho gia cung 1 hang */
+}
+.product-name h1{
+    font-size: 25px;
+}
+.product-name p {
+
+}
+.myprice-old {
+    font-size: 14px;
+    color: #666;
+    text-decoration: line-through; /* gach gia */
+}
+.myprice-new {
+    font-size: 16px;
+    color: red;
+    margin-left: 4px;
+}
+.myprice-new1 {
+    color: red;
+}
+.product-size {
+    display: flex;
+    margin-bottom: 20px;
+    margin-right: 100px;
+    padding-top: 10px;
+}
+.product-size input {
+    width: 35px;
+    height: 25px;
+    padding-left: 3px;
+}
+.buy-thu #thu {
+    width: 40px;
+    text-align: center;
+    border: 1px solid #ececec;
+}
+.product-button button{
+    width: 130px;
+    margin-left: 120px;
+    transition: all 0.5s ease;
+}
+.product-button button:hover {
+    background-color: red;
+}
+.product__buyproduct{
+    font-family: 'Poppins', sans-serif;
+    height: 36px;
+    cursor: pointer;
+    font-weight: 500;
+    border-radius: 8px;
+    font-size: 14px;
+    box-shadow: rgba(153, 153, 153, 0.6);
+    width: 100%;
+    border: 1px solid rgb(237, 28, 36);
+    text-transform: inherit;
+}

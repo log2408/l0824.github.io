@@ -1,0 +1,45 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+.product-bimg {
+    width: 100%;
+    padding-right: 20px;
+
+}
+.product-bimg img {
+    width: 100%;
+
+}
+.product-simg {
+    width: 20%;
+
+}
+.product-simg img {
+    width: 100%;
+}
+h2 {
+    padding-left: 30px;
+    font-size: 20px;
+}  
+h3 {
+    padding-left: 30px;
+    font-size: 15px;
+}
+.col-sm-5 p {
+    padding-left: 30px;
+    font-size: 14px;
+}
+.information-h {
+    padding-right: 40px;
+}
+.information {
+    display: flex;
+    align-items: baseline; /*can cho gia cung 1 hang */
+    padding-left: 30px;
+}
+.information p {
+    font-size: 14px;
+    margin-bottom: 0px;
+    padding-right: 50px;
+}
